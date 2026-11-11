@@ -10,99 +10,18 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- ================================================================= -->
-    <!-- Analytics, Tag Manager & Tracking Pixels                          -->
+    <!-- Local Stub for Cookie Consent UI (No External Trackers)           -->
     <!-- ================================================================= -->
-    <!-- Google tag (gtag.js) + Consent Mode v2 -->
     <script data-swup-ignore-script="">
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            wait_for_update: 500
-        });
+        function gtag() {}
     </script>
-    <script async="" data-swup-ignore-script="" src="./assets/js"></script>
-    <script data-swup-ignore-script="">
-        gtag('js', new Date());
-        gtag('config', 'G-WBFH893NER', {});
-    </script> <!-- Meta Pixel — enabled by cookieconsent after marketing consent -->
-    <script type="text/plain" data-category="marketing" data-service="metaPixel" data-swup-ignore-script="">
-    !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '4471683339809331');
-    fbq('track', 'PageView');
-</script> <!-- LinkedIn Insight Tag — enabled by cookieconsent after marketing consent -->
-    <script type="text/plain" data-category="marketing" data-service="linkedinInsight" data-swup-ignore-script="">
-    _linkedin_partner_id = '10630225';
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    (function (l) {
-        if (!l) {
-            window.lintrk = function (a, b) {
-                window.lintrk.q.push([a, b]);
-            };
-            window.lintrk.q = [];
-        }
-        var s = document.getElementsByTagName('script')[0];
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.async = true;
-        b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
-        s.parentNode.insertBefore(b, s);
-    })(window.lintrk);
-</script> <!-- Microsoft Ads UET — enabled by cookieconsent after marketing consent -->
-    <script type="text/plain" data-category="marketing" data-service="microsoftAds" data-swup-ignore-script="">
-    (function (w, d, t, u, o) {
-        w[u] = w[u] || [];
-        w[u].push('consent', 'update', { ad_storage: 'granted' });
-        o.ts = new Date().getTime();
-        var n = d.createElement(t);
-        n.src = 'https://bat.bing.net/bat.js?ti=' + o.ti + ('uetq' != u ? '&q=' + u : '');
-        n.async = 1;
-        n.onload = n.onreadystatechange = function () {
-            var s = this.readyState;
-            (s && 'loaded' !== s && 'complete' !== s) ||
-                ((o.q = w[u]),
-                (w[u] = new UET(o)),
-                w[u].push('pageLoad'),
-                (n.onload = n.onreadystatechange = null));
-        };
-        var i = d.getElementsByTagName(t)[0];
-        i.parentNode.insertBefore(n, i);
-    })(window, document, 'script', 'uetq', { ti: '97261830', enableAutoSpaTracking: true });
-</script>
     <!-- ================================================================= -->
     <!-- Favicons & Page Title                                             -->
     <!-- ================================================================= -->
-    <link rel="preconnect" href="https://www.datocms-assets.com/">
-    <link sizes="16x16" type="image/svg" rel="icon"
-        href="https://www.datocms-assets.com/166003/1761505611-favicon.svg?auto=format&amp;h=16&amp;w=16">
-    <link sizes="32x32" type="image/svg" rel="icon"
-        href="https://www.datocms-assets.com/166003/1761505611-favicon.svg?auto=format&amp;h=32&amp;w=32">
-    <link sizes="96x96" type="image/svg" rel="icon"
-        href="https://www.datocms-assets.com/166003/1761505611-favicon.svg?auto=format&amp;h=96&amp;w=96">
-    <link sizes="192x192" type="image/svg" rel="icon"
-        href="https://www.datocms-assets.com/166003/1761505611-favicon.svg?auto=format&amp;h=192&amp;w=192">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/favicon.png">
     <title>Nook living | Women’s Living & Lifestyle Community in Calicut</title>
 
     <!-- ================================================================= -->
@@ -344,6 +263,104 @@
         .c-menu-mobile_nav_label {
             color: #2c2e2a !important;
         }
+
+        /* Header 'Enquire now' button: remove icon space, restore original radius, and prevent shape change */
+        c-button-quote {
+            display: inline-block !important;
+            border-radius: var(--radius-sm) !important;
+            overflow: hidden !important;
+        }
+
+        .c-button-quote,
+        .c-menu-desktop_contact {
+            --button-icon-width: 0px !important;
+            --button-gap: 0px !important;
+            --button-label-transform: translate3d(0, 0, 0) !important;
+            gap: 0 !important;
+            justify-content: center !important;
+            align-items: center !important;
+            background-color: #ffffff !important;
+            color: #2c2e2a !important;
+            border-radius: var(--radius-sm) !important;
+            padding: calc(var(--spacing, .25rem) * 2.5) calc(var(--spacing, .25rem) * 4.5) !important;
+            transition: background-color 0.25s ease, color 0.25s ease !important;
+            overflow: hidden !important;
+            clip-path: none !important;
+        }
+
+        .c-button-quote:before {
+            display: none !important;
+        }
+
+        .c-button-quote_icon {
+            display: none !important;
+        }
+
+        .c-button-quote_label {
+            padding: 0 !important;
+            transform: none !important;
+            color: inherit !important;
+            transition: color 0.25s ease !important;
+        }
+
+        /* Enquire now button hover: background #816AB0 and white text with consistent original radius */
+        .c-menu-desktop_contact:after,
+        .c-menu-desktop_contact:hover:after {
+            background-color: #816AB0 !important;
+            border-radius: var(--radius-sm) !important;
+            overflow: hidden !important;
+        }
+
+        .c-button-quote:hover,
+        .c-menu-desktop_contact:hover {
+            background-color: #816AB0 !important;
+            color: #ffffff !important;
+            border-radius: var(--radius-sm) !important;
+            overflow: hidden !important;
+            clip-path: none !important;
+        }
+
+        .c-button-quote:hover .c-button-quote_label,
+        .c-menu-desktop_contact:hover .c-button-quote_label,
+        .c-menu-desktop_contact:hover * {
+            color: #ffffff !important;
+            transform: none !important;
+        }
+
+        .c-menu-mobile_contact {
+            overflow: hidden !important;
+            border-radius: 5px !important;
+        }
+
+        .c-menu-mobile_contact:hover {
+            background-color: #816AB0 !important;
+            color: #ffffff !important;
+            border-radius: 5px !important;
+        }
+
+        /* Header menu links hover: background #816AB0 and white text */
+        .c-menu-desktop_link:before {
+            background-color: #816AB0 !important;
+        }
+
+        .c-menu-desktop_link:hover,
+        .c-menu-desktop_link:hover .c-menu-desktop_link_label,
+        .c-menu-desktop_item:hover .c-menu-desktop_link,
+        .c-menu-desktop_item:hover .c-menu-desktop_link_label,
+        .c-menu-desktop_link.is-current-page,
+        .c-menu-desktop_link.is-current-page .c-menu-desktop_link_label,
+        .c-menu-desktop_item.active .c-menu-desktop_link,
+        .c-menu-desktop_item.active .c-menu-desktop_link_label {
+            color: #ffffff !important;
+        }
+
+        .c-menu-mobile_nav_link:hover,
+        .c-menu-mobile_nav_link:hover .c-menu-mobile_nav_label {
+            background-color: #816AB0 !important;
+            color: #ffffff !important;
+            border-radius: 8px;
+            padding-left: 0.5rem;
+        }
     </style>
 
 
@@ -445,10 +462,8 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
                     </ul>
                 </div>
             </div>
-            <div> <c-button-quote id="buttonquote-3"> <a class="c-button-quote c-menu-desktop_contact" href="#"> <span
-                            class="c-button-quote_label"> Enquire now
-                        </span> <span class="c-button-quote_icon"> <canvas class="c-button-quote_icon_canvas" width="80"
-                                height="80"></canvas> </span> </a> </c-button-quote> </div>
+            <div style="height: var(--menu-bar-height); display: flex; align-items: stretch;"> <c-button-quote id="buttonquote-3" style="height: 100%; display: flex; border-radius: var(--radius-sm); overflow: hidden;"> <a class="c-button-quote c-menu-desktop_contact" href="#" style="height: 100%; display: flex; align-items: center;"> <span
+                            class="c-button-quote_label"> Enquire now </span> </a> </c-button-quote> </div>
         </nav>
     </c-menu-desktop>
     <script type="module" src="./assets/MenuDesktop.astro_astro_type_script_index_0_lang.DiC-rqKj.js"></script>
@@ -1190,20 +1205,14 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
                                                 Community </div>
                                             <div class="body-sm rounded-3xl bg-white px-2.5 py-1.5 text-charcoal"> Lifestyle </div>
                                         </div> <c-dato-image data-astro-cid-zpkbt6gy="true" id="datoimage-7">
-                                            <picture class="c-article-card_picture block w-full h-full c-image block"
-                                                data-datocms-image="true"
-                                                style="background-image:url(&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLChULDhgXDg0WFR0VFg0NFxMZGBYfFiEdJisjGh0oHSEWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHBAQFi8dIh01LzUvLy81Ly8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAYAAACAwAAAAAAAAAAAAAAAAAAAgQFBv/EAB0QAAEFAAMBAAAAAAAAAAAAAAEAAgMEBRQVIRH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQA/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAEDESH/2gAMAwEAAhEDEQA/AMrUybHW/QE4rzRUiCE2HvSzZpDmJ7+g7hEhqTSS0onZsq7ED5KqFGOi81z4hEp8M6PT/9k=&quot;);background-size:cover;background-repeat:no-repeat;background-position:50% 50%;color:transparent"
-                                                data-astro-cid-zpkbt6gy="">
-                                                <source
-                                                    srcset="https://www.datocms-assets.com/166003/1775055937-case-study-luxury-spirits-gcc.webp?dpr=0.25 364w,https://www.datocms-assets.com/166003/1775055937-case-study-luxury-spirits-gcc.webp?dpr=0.5 728w,https://www.datocms-assets.com/166003/1775055937-case-study-luxury-spirits-gcc.webp?dpr=0.75 1092w,https://www.datocms-assets.com/166003/1775055937-case-study-luxury-spirits-gcc.webp 1456w"
-                                                    sizes="(max-width: 699px) 100vw, (max-width: 1199px) 50vw, (min-width: 1200px) 33vw, 100vw"
-                                                    data-astro-cid-zpkbt6gy=""> <img
-                                                    src="./assets/1775055937-case-study-luxury-spirits-gcc.webp"
+                                            <picture class="c-article-card_picture block w-full h-full c-image block">
+                                                <img
+                                                    src="./assets/article-coliving.jpg"
                                                     alt="A modern, aesthetic living space at Nook Living in Calicut"
                                                     title="A curated living space designed for women at Nook Living"
                                                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                                     class="object-cover w-full h-full c-image_img"
-                                                    style="aspect-ratio:1456 / 816;object-position:68% 43%"
+                                                    style="aspect-ratio:1376 / 768;object-position:center center"
                                                     data-testid="img" data-astro-cid-zpkbt6gy="">
                                             </picture>
                                         </c-dato-image>
@@ -1223,20 +1232,14 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
                                             <div class="body-sm rounded-3xl bg-white px-2.5 py-1.5 text-charcoal">
                                                 Design </div>
                                         </div> <c-dato-image data-astro-cid-zpkbt6gy="true" id="datoimage-8">
-                                            <picture class="c-article-card_picture block w-full h-full c-image block"
-                                                data-datocms-image="true"
-                                                style="background-image:url(&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgXFhQLDhgVDRIVDhYODQ0NFxUZGBYVFhYaHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHA4OHC8oFh07Ly8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAFAAb/xAAcEAACAwADAQAAAAAAAAAAAAABAwACBBIkMhH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEA//EABkRAQACAwAAAAAAAAAAAAAAAAEAEQISIf/aAAwDAQACEQMRAD8AzSwDcGLreErrBEehEXDrgwqqy2pUR06q6MwAMoOptuHyUQHIZxLn/9k=&quot;);background-size:cover;background-repeat:no-repeat;background-position:50% 50%;color:transparent"
-                                                data-astro-cid-zpkbt6gy="">
-                                                <source
-                                                    srcset="https://www.datocms-assets.com/166003/1763465294-middle-east-shopping.webp?dpr=0.25 364w,https://www.datocms-assets.com/166003/1763465294-middle-east-shopping.webp?dpr=0.5 728w,https://www.datocms-assets.com/166003/1763465294-middle-east-shopping.webp?dpr=0.75 1092w,https://www.datocms-assets.com/166003/1763465294-middle-east-shopping.webp 1456w"
-                                                    sizes="(max-width: 699px) 100vw, (max-width: 1199px) 50vw, (min-width: 1200px) 33vw, 100vw"
-                                                    data-astro-cid-zpkbt6gy=""> <img
-                                                    src="./assets/1763465294-middle-east-shopping.webp"
-                                                    alt="Residents enjoying lifestyle and comfort in Calicut"
+                                            <picture class="c-article-card_picture block w-full h-full c-image block">
+                                                <img
+                                                    src="./assets/article-sanctuary.jpg"
+                                                    alt="A serene, private bedroom sanctuary designed for women at Nook Living"
                                                     title="Safe, comfortable living for women at Nook Living" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade"
                                                     class="object-cover w-full h-full c-image_img"
-                                                    style="aspect-ratio:1456 / 816;object-position:56.99999999999999% 49%"
+                                                    style="aspect-ratio:1376 / 768;object-position:center center"
                                                     data-testid="img" data-astro-cid-zpkbt6gy="">
                                             </picture>
                                         </c-dato-image>
@@ -1255,20 +1258,14 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
                                                 Wellness </div>
                                             <div class="body-sm rounded-3xl bg-white px-2.5 py-1.5 text-charcoal"> Work &amp; Study </div>
                                         </div> <c-dato-image data-astro-cid-zpkbt6gy="true" id="datoimage-9">
-                                            <picture class="c-article-card_picture block w-full h-full c-image block"
-                                                data-datocms-image="true"
-                                                style="background-image:url(&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLChUWDhgWDwwVDhUNDREVFxslGBYVFhUaHysjGh0oHRYWJTUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHA4NHC8dFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAAABAYH/8QAHRAAAQQCAwAAAAAAAAAAAAAAAQACAwUEERQxQf/EABYBAQEBAAAAAAAAAAAAAAAAAAMEAv/EABgRAAMBAQAAAAAAAAAAAAAAAAABMREC/9oADAMBAAIRAxEAPwBA5j82pOgpSzgkbjE6Wi11ZCylcdeKUu42sx3ABTOjcQkJnycDWkJ2QN4fSEyhht6f/9k=&quot;);background-size:cover;background-repeat:no-repeat;background-position:50% 50%;color:transparent"
-                                                data-astro-cid-zpkbt6gy="">
-                                                <source
-                                                    srcset="https://www.datocms-assets.com/166003/1763463169-nicotine.webp?dpr=0.25 364w,https://www.datocms-assets.com/166003/1763463169-nicotine.webp?dpr=0.5 728w,https://www.datocms-assets.com/166003/1763463169-nicotine.webp?dpr=0.75 1092w,https://www.datocms-assets.com/166003/1763463169-nicotine.webp 1456w"
-                                                    sizes="(max-width: 699px) 100vw, (max-width: 1199px) 50vw, (min-width: 1200px) 33vw, 100vw"
-                                                    data-astro-cid-zpkbt6gy=""> <img
-                                                    src="./assets/1763463169-nicotine.webp"
-                                                    alt="Comfortable private bedroom and study space at Nook Living"
-                                                    title="Peaceful, private living spaces at Nook Living" loading="lazy"
+                                            <picture class="c-article-card_picture block w-full h-full c-image block">
+                                                <img
+                                                    src="./assets/article-study.jpg"
+                                                    alt="Aesthetic study and productive workspace at Nook Living"
+                                                    title="Work and study spaces designed for focus at Nook Living" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade"
                                                     class="object-cover w-full h-full c-image_img"
-                                                    style="aspect-ratio:1456 / 816;object-position:50% 50%"
+                                                    style="aspect-ratio:1376 / 768;object-position:center center"
                                                     data-testid="img" data-astro-cid-zpkbt6gy="">
                                             </picture>
                                         </c-dato-image>
@@ -1292,20 +1289,14 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
                                             <div class="body-sm rounded-3xl bg-white px-2.5 py-1.5 text-charcoal">
                                                 Workshops </div>
                                         </div> <c-dato-image data-astro-cid-zpkbt6gy="true" id="datoimage-10">
-                                            <picture class="c-article-card_picture block w-full h-full c-image block"
-                                                data-datocms-image="true"
-                                                style="background-image:url(&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgRCgoLDhgQDhUVFRYVCw0YHR8lJBYVFhUaKyslHR0oHR4WJDUlKC0vMjIyHSI4PTcwPCsxMi8BCgsLDg0OHBAQHDsoIig7Lzs7Lzs7LzsvLzs1Ozs7Ly8vLy87Ly8vLy87OzsvLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAYAAACAwAAAAAAAAAAAAAAAAAABQMEBv/EACAQAAAFBAMBAAAAAAAAAAAAAAABAgQFAwYSURRBYRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwH/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIREiH/2gAMAwEAAhEDEQA/AL1qVOXbS0mfQxM1E4V1q9DK2JWq3gF46CJ/L1qylZbA3qy0ELpRl8YkegCKXdLNmhOzAER00ZKk+n//2Q==&quot;);background-size:cover;background-repeat:no-repeat;background-position:50% 50%;color:transparent"
-                                                data-astro-cid-zpkbt6gy="">
-                                                <source
-                                                    srcset="https://www.datocms-assets.com/166003/1780333232-bartender-preparing-cocktails-premium-bar.webp?dpr=0.25 364w,https://www.datocms-assets.com/166003/1780333232-bartender-preparing-cocktails-premium-bar.webp?dpr=0.5 728w,https://www.datocms-assets.com/166003/1780333232-bartender-preparing-cocktails-premium-bar.webp?dpr=0.75 1092w,https://www.datocms-assets.com/166003/1780333232-bartender-preparing-cocktails-premium-bar.webp 1456w"
-                                                    sizes="(max-width: 699px) 100vw, (max-width: 1199px) 50vw, (min-width: 1200px) 33vw, 100vw"
-                                                    data-astro-cid-zpkbt6gy=""> <img
-                                                    src="./assets/1780333232-bartender-preparing-cocktails-premium-bar.webp"
-                                                    alt="Community lounge and social gathering at Nook Living"
-                                                    title="Sisterhood and vibrant events at Nook Living"
+                                            <picture class="c-article-card_picture block w-full h-full c-image block">
+                                                <img
+                                                    src="./assets/article-community.jpg"
+                                                    alt="Community rooftop gathering and sisterhood events at Nook Living"
+                                                    title="Sisterhood and rooftop community gatherings at Nook Living"
                                                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                                     class="object-cover w-full h-full c-image_img"
-                                                    style="aspect-ratio:1456 / 816;object-position:50% 34%"
+                                                    style="aspect-ratio:1376 / 768;object-position:center center"
                                                     data-testid="img" data-astro-cid-zpkbt6gy="">
                                             </picture>
                                         </c-dato-image>
@@ -2209,10 +2200,6 @@ C287.7,321.2,276.5,325.8,265,325.8z"></path>
     <!-- 6. Global Scripts & Cookie Consent Modal                           -->
     <!-- ================================================================= -->
     <script type="module" src="./assets/Layout.astro_astro_type_script_index_1_lang.KS0fHDdw.js"></script>
-    <script async="" id="netlify-rum-container" src="./assets/rum"
-        data-netlify-rum-site-id="0107315f-cae0-4f50-b48c-645640ac5f5a" data-netlify-deploy-branch="main"
-        data-netlify-deploy-context="production"
-        data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiMDEwNzMxNWYtY2FlMC00ZjUwLWI0OGMtNjQ1NjQwYWM1ZjVhIiwiYWNjb3VudF9pZCI6IjY5MTJmOWU4ZWVkMmFhYmExNGMwYzlmNyIsImRlcGxveV9pZCI6IjZhZjM2YmFiOTQxZDRiNGQ4MzhjZmNkMCIsImlzcyI6Im5ldGxpZnkifQ.MI5pJPvah68lhCD7kqBBV2B73ekrOcFRIJESHImtV5o"></script>
     <div id="cc-main" data-nosnippet="">
         <div class="cm-wrapper cc--anim">
             <div class="cm cm--box cm--inline cm--bottom cm--right" role="dialog" aria-modal="true" aria-hidden="true"

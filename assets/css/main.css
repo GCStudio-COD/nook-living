@@ -10683,5 +10683,116 @@ body {
     color: #ffffff !important;
 }
 
+/* Header 'Enquire now' button: match menu bar height, remove icon space, restore radius */
+.c-menu-desktop > div:last-child {
+    display: flex !important;
+    height: var(--menu-bar-height) !important;
+    align-items: center !important;
+}
+
+c-button-quote {
+    display: flex !important;
+    height: var(--menu-bar-height) !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+}
+
+.c-button-quote,
+.c-menu-desktop_contact {
+    --button-height: var(--menu-bar-height) !important;
+    --button-icon-width: 0px !important;
+    --button-gap: 0px !important;
+    --button-label-transform: translate3d(0, 0, 0) !important;
+    height: var(--menu-bar-height) !important;
+    min-height: var(--menu-bar-height) !important;
+    box-sizing: border-box !important;
+    gap: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #ffffff !important;
+    color: #2c2e2a !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 0 calc(var(--spacing, .25rem) * 6) !important;
+    transition: background-color 0.25s ease, color 0.25s ease !important;
+    overflow: hidden !important;
+    clip-path: none !important;
+}
+
+.c-button-quote:before {
+    display: none !important;
+}
+
+.c-button-quote_icon {
+    display: none !important;
+}
+
+.c-button-quote_label {
+    padding: 0 !important;
+    transform: none !important;
+    color: inherit !important;
+    transition: color 0.25s ease !important;
+    line-height: 1 !important;
+}
+
+/* Enquire now button hover: background #816AB0 and white text with consistent original radius */
+.c-menu-desktop_contact:after,
+.c-menu-desktop_contact:hover:after {
+    background-color: #816AB0 !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.c-button-quote:hover,
+.c-menu-desktop_contact:hover {
+    background-color: #816AB0 !important;
+    color: #ffffff !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    clip-path: none !important;
+}
+
+.c-button-quote:hover .c-button-quote_label,
+.c-menu-desktop_contact:hover .c-button-quote_label,
+.c-menu-desktop_contact:hover * {
+    color: #ffffff !important;
+    transform: none !important;
+}
+
+.c-menu-mobile_contact {
+    overflow: hidden !important;
+    border-radius: 5px !important;
+}
+
+.c-menu-mobile_contact:hover {
+    background-color: #816AB0 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+}
+
+/* Header menu links hover: background #816AB0 and white text */
+.c-menu-desktop_link:before {
+    background-color: #816AB0 !important;
+}
+
+.c-menu-desktop_link:hover,
+.c-menu-desktop_link:hover .c-menu-desktop_link_label,
+.c-menu-desktop_item:hover .c-menu-desktop_link,
+.c-menu-desktop_item:hover .c-menu-desktop_link_label,
+.c-menu-desktop_link.is-current-page,
+.c-menu-desktop_link.is-current-page .c-menu-desktop_link_label,
+.c-menu-desktop_item.active .c-menu-desktop_link,
+.c-menu-desktop_item.active .c-menu-desktop_link_label {
+    color: #ffffff !important;
+}
+
+.c-menu-mobile_nav_link:hover,
+.c-menu-mobile_nav_link:hover .c-menu-mobile_nav_label {
+    background-color: #816AB0 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding-left: 0.5rem;
+}
+
 
 
